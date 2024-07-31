@@ -1,8 +1,11 @@
 const Footer = () => {
   return (
-    <div id="footer">
-      <a href="https://ironhack.com" target="_blank">
-        Click here to go to Ironhack's website!
+    <div className="footer">
+      <a
+        href="https://github.com/l-fenster/React-App-Mini-Project/tree/main/mini-project-react"
+        target="_blank"
+      >
+        Click here to go to the repo!
       </a>
     </div>
   );

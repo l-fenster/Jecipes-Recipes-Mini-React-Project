@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div id="sideBar">
+    <div className="sidebar">
       <a href="#Home">Home</a>
       <a href="#About">About</a>
     </div>
