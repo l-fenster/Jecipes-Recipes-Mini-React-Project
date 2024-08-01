@@ -1,8 +1,9 @@
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <a href="#Home">Home</a>
-      <a href="#About">About</a>
+      <a href="/">Homepage</a>
+      <a href="/about">About Us</a>
+      <a href="/itemDetails">Item Details</a>
     </div>
   );
 };
