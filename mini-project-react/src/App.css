@@ -1,8 +1,47 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: auto;
+  padding: 0;
   text-align: center;
+  background-color: #fefaf1;
+}
+
+.main {
+  display: flex;
+  background-color: #fefaf1;
+  width: 90vw;
+  height: 100%;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  background-color: #9caf88;
+  height: 200px;
+}
+
+.navbar img {
+  height: 150px;
+  width: 150px;
+}
+
+.recipeList {
+  background-color: #fefaf1;
+  color: black;
+}
+
+.sidebar {
+  background-color: #fdc685;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 69vh;
+}
+
+.footer {
+  background-color: #9caf88;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
