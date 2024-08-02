@@ -1,27 +1,39 @@
-import { useState } from "react";
-import RecipeData from "../recipes.json";
-import RecipeCard from "./RecipeCard";
+/*import RecipeCard from "./RecipeCard";
 
-function RecipeList() {
-  const [recipes, setRecipes] = useState(RecipeData);
-
-  const deleteItem = (recipeId) => {
-    const filteredRecipes = recipes.filter((recipe) => recipe.id !== recipeId);
-
-    setRecipes(filteredRecipes);
-  };
-
+function RecipeList({ recipeData, deleteItem }) {
   return (
     <div className="recipeList">
       <h2>List of Recipes</h2>
+      <ul>
+        {recipeData.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            clickToDelete={deleteItem}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-      {recipes.map((recipe) => (
-        <RecipeCard
-          key={recipe.id}
-          recipe={recipe}
-          clickToDelete={deleteItem}
-        />
-      ))}
+export default RecipeList;*/
+
+import RecipeCard from "./RecipeCard";
+
+function RecipeList({ recipeData, deleteItem }) {
+  return (
+    <div className="recipeList">
+      <h2>List of Recipes</h2>
+      <ul>
+        {recipeData.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            clickToDelete={deleteItem}
+          />
+        ))}
+      </ul>
     </div>
   );
 }

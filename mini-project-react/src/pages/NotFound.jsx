@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const imgURL = "../assets/not-found.png";
+const imgURL = "../assets/404-cupcake.png";
 
 export default function NotFound() {
   const navigate = useNavigate();
