@@ -21,19 +21,20 @@ export default RecipeList;*/
 
 import RecipeCard from "./RecipeCard";
 
-function RecipeList({ recipeData, deleteItem }) {
+function RecipeList({ recipeData, editRecipe, deleteItem }) {
   return (
     <div className="recipeList">
       <h2>List of Recipes</h2>
-      <ul>
+      <div className="recipeCardContainer">
         {recipeData.map((recipe) => (
           <RecipeCard
             key={recipe.id}
             recipe={recipe}
+            clickToEdit={editRecipe}
             clickToDelete={deleteItem}
           />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

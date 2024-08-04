@@ -30,11 +30,16 @@ export default function ItemDetails({ recipeData }) {
 //item.description
 
 import React from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
 
 export default function ItemDetails({ recipeData }) {
   const { recipeId } = useParams();
   const foundRecipe = recipeData.find((recipe) => recipe.id === recipeId);
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/");
+  };
 
   if (!foundRecipe) {
     return <Navigate to="/error" />;
@@ -44,17 +49,22 @@ export default function ItemDetails({ recipeData }) {
       <div className="recipe-wrapper">
         <div className="recipe card">
           <img
-            src={foundRecipe.img}
+            src={foundRecipe.image}
             alt={`${foundRecipe.name} recipe image`}
             width={300}
             height="auto"
             style={{ borderRadius: "50%" }}
           />
           <h2>{foundRecipe.name}</h2>
-          {showCalories !== "hide" && <p>Calories: {foundRecipe.calories}</p>}
-          {showServings !== "hide" && <p>Servings: {foundRecipe.servings}</p>}
+          {foundRecipe.calories !== "hide" && (
+            <p>Calories: {foundRecipe.calories}</p>
+          )}
+          {foundRecipe.servings !== "hide" && (
+            <p>Servings: {foundRecipe.servings}</p>
+          )}
         </div>
       </div>
+      <button onClick={handleNavigate}>Return to Homepage</button>
     </div>
   );
 }
