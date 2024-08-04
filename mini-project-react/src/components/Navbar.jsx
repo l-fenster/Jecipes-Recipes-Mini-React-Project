@@ -10,7 +10,9 @@ const Navbar = () => {
     <div className="navbar">
       <img src={logo} alt="logo" />
       <h1>Jecipe's Recipes</h1>
-      <button onClick={handleNavigate}>Add your own Recipe!</button>
+      <button className="add-btn" onClick={handleNavigate}>
+        Add your own Recipe!
+      </button>
     </div>
   );
 };

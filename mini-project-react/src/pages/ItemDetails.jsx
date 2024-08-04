@@ -32,9 +32,13 @@ export default function ItemDetails({ recipeData }) {
 import React from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 
-export default function ItemDetails({ recipeData }) {
+export default function ItemDetails({ recipeData, editRecipe }) {
   const { recipeId } = useParams();
   const foundRecipe = recipeData.find((recipe) => recipe.id === recipeId);
+
+  const handleEditNavigate = () => {
+    navigate(`/${foundRecipe.id}/edit`);
+  };
 
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -63,6 +67,9 @@ export default function ItemDetails({ recipeData }) {
             <p>Servings: {foundRecipe.servings}</p>
           )}
         </div>
+        <button onClick={handleEditNavigate} className="btn-edit">
+          Edit Recipe
+        </button>
       </div>
       <button onClick={handleNavigate}>Return to Homepage</button>
     </div>
