@@ -42,7 +42,7 @@ export default function ItemDetails({ recipeData, editRecipe }) {
 
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/");
+    navigate("/recipesPage");
   };
 
   if (!foundRecipe) {
@@ -71,7 +71,7 @@ export default function ItemDetails({ recipeData, editRecipe }) {
           Edit Recipe
         </button>
       </div>
-      <button onClick={handleNavigate}>Return to Homepage</button>
+      <button onClick={handleNavigate}>Return to Recipes</button>
     </div>
   );
 }

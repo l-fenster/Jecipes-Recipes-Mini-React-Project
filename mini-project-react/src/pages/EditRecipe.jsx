@@ -55,7 +55,7 @@ export default function EditRecipe({ recipes, editRecipe }) {
 
     editRecipe(editedRecipe);
 
-    navigate("/");
+    navigate("/recipesPage");
   };
 
   return (

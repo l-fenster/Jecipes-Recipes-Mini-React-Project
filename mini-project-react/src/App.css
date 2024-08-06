@@ -13,7 +13,7 @@ body {
   padding-top: 150px; /* height of navbar */
   padding-bottom: 40px; /* height of footer */
   text-align: center;
-  background-color: #fefaf1;
+  background-color: #f5f5dc;
   color: black;
   box-sizing: border-box;
 }
@@ -31,7 +31,6 @@ body {
 
 .navbar {
   margin: 0;
-  padding: 0;
   background-color: #9caf88;
   width: 100vw;
   position: fixed;
@@ -39,22 +38,28 @@ body {
   left: 0;
   z-index: 1001;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   color: #fdc685;
 }
 
-.navbar img {
+.logo-name {
+  display: flex;
+}
+
+.logo-name img {
   height: 150px;
   width: 150px;
   padding: 0;
 }
 
 .RecipeCard {
-  border: 2px solid black;
+  border: 2px solid #4e6f0b;
+  border-radius: 15px;
   padding: 1em;
   margin: 0.5em;
   width: 200px;
   text-align: center;
+  background-color: #f9e6e9;
 }
 
 .recipeList {
@@ -82,6 +87,9 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #sidebar a {
@@ -115,7 +123,7 @@ body {
 }
 
 .footer a {
-  color: #6b8e23;
+  color: #4e6f0b;
 }
 
 .logo {
@@ -161,4 +169,60 @@ body {
   width: auto;
   background-color: #fa7d93;
   color: #fefaf1;
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+}
+.btn-edit {
+  background-color: #9caf88;
+  color: #4e6f0b;
+  margin-bottom: 10px;
+}
+
+.btn-edit:hover {
+  background-color: #fa7d93;
+  color: #fefaf1;
+}
+
+.btn-delete {
+  background-color: #4e6f0b;
+  color: #9caf88;
+}
+
+.btn-delete:hover {
+  color: #fa7d93;
+  background-color: #fefaf1;
+}
+
+.deliciousRecipe {
+  height: 100px;
+  width: auto;
+}
+
+.recipeBackground {
+  background-color: #fdc685;
+  border-radius: 15px;
+  border: 2px solid #4e6f0b;
+}
+
+.recipeBackground a {
+  color: #4e6f0b;
+}
+
+.recipeBackground img {
+  margin-top: 10px;
+  border: 1px solid #8b4513;
+  border-radius: 15px;
+}
+
+.recipeBackground .btn-delete {
+  margin-bottom: 10px;
+}
+
+.category-select {
+  background-color: #fa7d93;
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  margin-bottom: 20px;
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function About() {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/");
+    navigate("/recipesPage");
   };
   return (
     <div>
@@ -13,7 +13,7 @@ export default function About() {
       <ul>
         <li></li>
       </ul>
-      <button onClick={handleNavigate}>Return to Homepage</button>
+      <button onClick={handleNavigate}>Return to Recipes</button>
     </div>
   );
 }

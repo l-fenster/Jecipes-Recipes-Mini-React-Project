@@ -8,7 +8,7 @@ export default function AddRecipe({ createRecipe }) {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/");
+    navigate("/recipesPage");
   };
 
   const [name, setName] = useState("");
@@ -110,7 +110,7 @@ export default function AddRecipe({ createRecipe }) {
           Save
         </button>
       </form>
-      <button onClick={handleNavigate}>Return to Homepage</button>
+      <button onClick={handleNavigate}>Return to Recipes</button>
     </div>
   );
 }

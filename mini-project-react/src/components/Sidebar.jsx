@@ -12,6 +12,13 @@ const Sidebar = () => {
         </NavLink>
         <br />
         <NavLink
+          to="/recipesPage"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Recipes
+        </NavLink>
+        <br />
+        <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? "active" : "")}
         >

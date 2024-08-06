@@ -21,9 +21,9 @@ function RecipeList({ recipeData, editRecipe, deleteItem }) {
   return (
     <div className="recipeList">
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <h5>Filter Recipes:</h5>
+        {/* <h5>Filter Recipes:</h5> */}
         <div className="category-select-wrapper">
-          <select onChange={handleCategoryFilter}>
+          <select className="category-select" onChange={handleCategoryFilter}>
             <option value="">Show All Recipes</option>
             <option value="low-calorie">Show Low Calorie Recipes</option>
           </select>

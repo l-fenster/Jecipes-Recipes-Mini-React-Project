@@ -16,6 +16,7 @@ import ItemDetails from "./pages/ItemDetails";
 import NotFound from "./pages/NotFound";
 import AddRecipe from "./pages/AddRecipe";
 import EditRecipe from "./pages/EditRecipe";
+import StartPage from "./pages/StartPage";
 
 function App() {
   const [recipes, setRecipes] = useState(RecipeInfo);
@@ -35,7 +36,7 @@ function App() {
 
     setRecipes(editedRecipes);
   };
-
+  //change all instances of route / to /recipesPage
   return (
     <>
       <div>
@@ -46,8 +47,9 @@ function App() {
         <Footer />
       </div>
       <Routes>
+        <Route path="/" element={<StartPage />} />
         <Route
-          path="/"
+          path="/recipesPage"
           element={<Dashboard recipeData={recipes} deleteItem={deleteItem} />}
         />
         <Route path="/about" element={<About />} />
