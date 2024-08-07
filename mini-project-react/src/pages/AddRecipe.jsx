@@ -2,7 +2,6 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import defaultFoodImage from "../assets/food.png";
-//form needs to change state in app when submitted, but don't need to handle contents in app, but rather on page
 
 export default function AddRecipe({ createRecipe }) {
   const navigate = useNavigate();
@@ -28,7 +27,6 @@ export default function AddRecipe({ createRecipe }) {
     const value = Number(e.target.value);
     if (value < 0) return;
     setCalories(value);
-    //we are checking that age is a number above 0 before setting age to value
   };
 
   const handleServingsChange = (e) => {
@@ -38,31 +36,26 @@ export default function AddRecipe({ createRecipe }) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); //as we use the submit button, this will override default HTML behvaior to refresh page
+    e.preventDefault();
     if (!name || !calories || !servings) {
       alert("Please fill in all fields");
       return;
     }
 
     const newId = uuidv4();
+    console.log(newId);
 
-    //image URL is optional, provide default if not provided
-    //if imgURL provided, then that will be used, otherwise default
     const image = img || defaultFoodImage;
 
-    //creating a new student profile
     const newRecipe = { id: newId, name, image, calories, servings };
 
-    //add student to students state -->state is managed in App
     createRecipe(newRecipe);
 
-    //clear input values only after adding them to array
     setName("");
     setImg("");
     setCalories("");
     setServings("");
 
-    //redirect user to list page
     handleNavigate();
   };
 
@@ -114,5 +107,3 @@ export default function AddRecipe({ createRecipe }) {
     </div>
   );
 }
-//form lets you add name, age, bootcamp, and image of new student
-//select tag lets user pick from options in dropdown

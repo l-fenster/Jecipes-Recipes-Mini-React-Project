@@ -160,6 +160,17 @@ body {
   padding: 2em;
 }
 
+.recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.instructions {
+  margin-top: 0;
+}
+
 .read-the-docs {
   color: #888;
 }
@@ -177,6 +188,7 @@ body {
   background-color: #9caf88;
   color: #4e6f0b;
   margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .btn-edit:hover {
@@ -203,10 +215,12 @@ body {
   background-color: #fdc685;
   border-radius: 15px;
   border: 2px solid #4e6f0b;
+  height: 500px;
 }
 
 .recipeBackground a {
   color: #4e6f0b;
+  padding-bottom: 0;
 }
 
 .recipeBackground img {
@@ -229,6 +243,44 @@ body {
 
 .jecipe-button {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  margin-left: 500px;
+}
+.jecipe-button button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
+.jecipe {
+  margin-bottom: 30px;
+  margin-left: 300px;
+}
+.recipe-wrapper {
+  background-color: #f9e6e9;
+  width: 750px;
+  height: 600px;
+  border-radius: 15px;
+  margin-top: 30px;
+  border: 2px solid #4e6f0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemDetails {
+  display: flex;
+  justify-content: center;
+}
+
+.itemBackground {
+  background-color: #fdc685;
+  border-radius: 15px;
+  border: 2px solid #4e6f0b;
+  width: 700px;
+  height: 550px;
+}
+
+.instructions {
+  list-style-type: none;
 }

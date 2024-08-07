@@ -12,6 +12,12 @@ function RecipeList({ recipeData, editRecipe, deleteItem }) {
     ? recipeData.filter((recipe) => {
         if (category === "low-calorie") {
           return recipe.calories <= 200;
+        } else if (category === "vegetarian") {
+          return recipe.vegetarian === true;
+        } else if (category === "vegetarian-lowCal") {
+          return recipe.vegetarian === true && recipe.calories <= 200;
+        } else if (category === "dessert") {
+          return recipe.dessert === true;
         } else {
           return recipe.category === category;
         }
@@ -26,6 +32,11 @@ function RecipeList({ recipeData, editRecipe, deleteItem }) {
           <select className="category-select" onChange={handleCategoryFilter}>
             <option value="">Show All Recipes</option>
             <option value="low-calorie">Show Low Calorie Recipes</option>
+            <option value="vegetarian">Show Vegetarian Recipes</option>
+            <option value="vegetarian-lowCal">
+              Show Low Calorie Vegetarian Recipes
+            </option>
+            <option value="dessert">Show Dessert Recipes</option>
           </select>
         </div>
       </div>

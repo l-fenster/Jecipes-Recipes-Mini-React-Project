@@ -8,7 +8,12 @@ export default function About() {
   return (
     <div>
       <h1>About this Project</h1>
-      <p>!!!!!!</p>
+      <p>
+        We wanted to create a custom webpage for our frog chef friend, Jecipe,
+        to upload his favorite recipes. Jecipe has already uploaded a few of his
+        best recipes, which you can see on the Recipes page. Please upload your
+        favorite recipes to the Jecipe's Recipes collection.
+      </p>
       <h2>Team Members</h2>
       <ul>
         <li></li>

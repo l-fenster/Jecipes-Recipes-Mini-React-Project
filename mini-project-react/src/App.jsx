@@ -19,6 +19,8 @@ import EditRecipe from "./pages/EditRecipe";
 import StartPage from "./pages/StartPage";
 
 function App() {
+  document.title = "Jecipe's Recipes";
+
   const [recipes, setRecipes] = useState(RecipeInfo);
 
   const deleteItem = (recipeId) => {
@@ -37,6 +39,7 @@ function App() {
     setRecipes(editedRecipes);
   };
   //change all instances of route / to /recipesPage
+
   return (
     <>
       <div>

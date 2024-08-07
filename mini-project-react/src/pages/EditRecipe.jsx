@@ -11,7 +11,7 @@ export default function EditRecipe({ recipes, editRecipe }) {
     return <Navigate to="/error" />;
   }
 
-  const navigate = useNavigate(); //put this here because you will only need to navigate if you've foundStudent
+  const navigate = useNavigate();
 
   const [name, setName] = useState(foundRecipe.name);
   const [img, setImg] = useState(foundRecipe.image);
@@ -105,3 +105,15 @@ export default function EditRecipe({ recipes, editRecipe }) {
     </div>
   );
 }
+//make an option to edit the recipe instructions as well by viewing each <li> in instructions be their own input field
+//also add a button to add a <li>
+//also add a button for <li> to delete that <li>
+
+//for AddRecipe:
+//make all new recipe cards automatically have <h3>Instructions:<h3>
+//the user has a button (which says "Add Instruction Step") in AddRecipe that when clicked adds a new input field, which when saved will be a new list item
+//the user can add up to 6 <li> (therefore up to 6 input fields)
+//after the sixth input field is added, there is an alert that says "Only 6 instruction steps allowed" and no more input fields will be generated
+//if there is less than six input fields again because the user deletes one, then they will again be able to add an input field
+//there should also be a button next to every generated input field that allows the user to delete that input field
+//when the user hits save, these instructions input fields will be created as an unordered list inside itemDetails
