@@ -9,9 +9,9 @@ export default function StartPage() {
   };
 
   return (
-    <div>
+    <div className="start">
       <div className="jecipe-button">
-        <div>
+        <div className="jecipe-text">
           <h1>Hi I'm Jecipe!</h1>
           <h2>Welcome to my recipe page!</h2>
         </div>
