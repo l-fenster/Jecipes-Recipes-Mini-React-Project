@@ -100,10 +100,14 @@ export default function ItemDetails({ recipeData, editRecipe }) {
             </div>
           </div>
           <div className="instructions">{instructions}</div>
-          <button onClick={handleEditNavigate} className="btn-edit">
-            Edit Recipe
-          </button>
-          <button onClick={handleNavigate}>Return to Recipes</button>
+          <div className="top-down-btn">
+            <button onClick={handleEditNavigate} className="btn-edit-details">
+              Edit Recipe
+            </button>
+            <button className="return-btn-details" onClick={handleNavigate}>
+              Return to Recipes
+            </button>
+          </div>
         </div>
       </div>
     </div>

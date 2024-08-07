@@ -1,109 +1,167 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-import defaultFoodImage from "../assets/food.png";
-
+import defaultFoodImage from "../assets/cooking.jpeg";
 export default function AddRecipe({ createRecipe }) {
   const navigate = useNavigate();
-
   const handleNavigate = () => {
     navigate("/recipesPage");
   };
-
   const [name, setName] = useState("");
   const [img, setImg] = useState("");
   const [calories, setCalories] = useState("");
   const [servings, setServings] = useState("");
-
+  const [instructions, setInstructions] = useState({ step1: "" });
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-
   const handleImgChange = (e) => {
     setImg(e.target.value);
   };
-
   const handleCaloriesChange = (e) => {
     const value = Number(e.target.value);
     if (value < 0) return;
     setCalories(value);
   };
-
   const handleServingsChange = (e) => {
     const value = Number(e.target.value);
     if (value < 0) return;
     setServings(value);
   };
-
+  const handleInstructionChange = (e, step) => {
+    setInstructions({ ...instructions, [step]: e.target.value });
+  };
+  const handleAddInstruction = () => {
+    const newStep = `step${Object.keys(instructions).length + 1}`;
+    setInstructions({ ...instructions, [newStep]: "" });
+  };
+  const handleRemoveInstruction = (step) => {
+    const { [step]: _, ...rest } = instructions;
+    setInstructions(rest);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !calories || !servings) {
       alert("Please fill in all fields");
       return;
     }
-
     const newId = uuidv4();
-    console.log(newId);
-
     const image = img || defaultFoodImage;
-
-    const newRecipe = { id: newId, name, image, calories, servings };
-
+    const newRecipe = {
+      id: newId,
+      name,
+      image,
+      calories,
+      servings,
+      instructions,
+    };
     createRecipe(newRecipe);
-
     setName("");
     setImg("");
     setCalories("");
     setServings("");
-
+    setInstructions({ step1: "" });
     handleNavigate();
   };
-
   return (
     <div>
-      <h1>Add your own Recipe!</h1>
-      <form>
-        <div className="input-wrapper">
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleNameChange}
-          />
-        </div>
-        <div className="input-wrapper">
-          <label>Image URL:</label>
-          <input
-            type="text"
-            name="img"
-            value={img}
-            onChange={handleImgChange}
-          />
-        </div>
-        <div className="input-wrapper">
-          <label>Calories:</label>
-          <input
-            type="number"
-            name="calories"
-            value={calories}
-            onChange={handleCaloriesChange}
-          />
-        </div>
-        <div className="input-wrapper">
-          <label>Servings:</label>
-          <input
-            type="number"
-            name="servings"
-            value={servings}
-            onChange={handleServingsChange}
-          />
-        </div>
-        <button type="submit" onClick={handleSubmit}>
+      <div className="edit-add">
+        <div className="edit-box-add">
+          <h1 className="page-heading">Add your own Recipe!</h1>
+          <form>
+            <div className="input-wrapper-add">
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleNameChange}
+              />
+            </div>
+            <div className="input-wrapper-add">
+              <label>Image URL:</label>
+              <input
+                type="text"
+                name="img"
+                value={img}
+                onChange={handleImgChange}
+              />
+            </div>
+            <div className="input-wrapper-add">
+              <label>Calories:</label>
+              <input
+                type="number"
+                name="calories"
+                value={calories}
+                onChange={handleCaloriesChange}
+              />
+            </div>
+            <div className="input-wrapper-add">
+              <label>Servings:</label>
+              <input
+                type="number"
+                name="servings"
+                value={servings}
+                onChange={handleServingsChange}
+              />
+            </div>
+            <div className="input-wrapper-add">
+              {/* {Object.keys(instructions).length < 6 && (
+            <button type="button" onClick={handleAddInstruction}>
+              Add Instruction Step
+            </button>
+          )} */}
+              <button className="add-save" type="submit" onClick={handleSubmit}>
+                Save
+              </button>
+              <button className="add-return" onClick={handleNavigate}>
+                Return to Recipes
+              </button>
+              <div className="instructions-steps-add">
+                <h3>Instructions:</h3>
+                {Object.keys(instructions).length < 6 && (
+                  <button
+                    className="add-instructions-btn"
+                    type="button"
+                    onClick={handleAddInstruction}
+                  >
+                    Add Instruction Step
+                  </button>
+                )}
+              </div>
+              {Object.keys(instructions).map((step, index) => (
+                <div key={step} className="instruction-wrapper">
+                  <label>Step {index + 1}:</label>
+                  <input
+                    type="text"
+                    name={step}
+                    value={instructions[step]}
+                    onChange={(e) => handleInstructionChange(e, step)}
+                  />
+                  {index >= 0 && (
+                    <button
+                      className="add-remove"
+                      type="button"
+                      onClick={() => handleRemoveInstruction(step)}
+                    >
+                      Remove
+                    </button>
+                  )}
+                </div>
+              ))}
+              {/* {Object.keys(instructions).length < 6 && (
+            <button type="button" onClick={handleAddInstruction}>
+              Add Instruction
+            </button>
+          )} */}
+            </div>
+            {/* <button type="submit" onClick={handleSubmit}>
           Save
-        </button>
-      </form>
-      <button onClick={handleNavigate}>Return to Recipes</button>
+        </button> */}
+          </form>
+          {/* <button onClick={handleNavigate}>Return to Recipes</button> */}
+        </div>
+      </div>
     </div>
   );
 }

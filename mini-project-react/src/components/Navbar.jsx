@@ -8,14 +8,18 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <div className="logo-name">
-        <img src={logo} alt="logo" />
-        <h1>Jecipe's Recipes</h1>
-      </div>
+      <div className="navbar-content">
+        <div className="logo-name">
+          <img src={logo} alt="logo" />
+          <h1 className="heading pacifico-regular">
+            <span className="span">.</span> Jecipe's Recipes
+          </h1>
+        </div>
 
-      <button className="add-btn" onClick={handleNavigate}>
-        Add your own Recipe!
-      </button>
+        <button className="add-btn" onClick={handleNavigate}>
+          Add your own Recipe!
+        </button>
+      </div>
     </div>
   );
 };
