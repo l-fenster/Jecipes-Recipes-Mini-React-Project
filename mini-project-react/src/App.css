@@ -332,6 +332,7 @@ body {
 .itemDetails {
   display: flex;
   justify-content: center;
+  color: #46230a;
 }
 
 .itemBackground {
@@ -418,6 +419,7 @@ body {
   border: 2px solid #4e6f0b;
   margin: 30px;
   margin-left: 40%;
+  color: #46230a;
 }
 
 .edit-box {
@@ -427,6 +429,7 @@ body {
   background-color: #fdc685;
   border-radius: 15px;
   border: 2px solid #4e6f0b;
+  color: #46230a;
 }
 
 .edit-box-add {
@@ -436,6 +439,7 @@ body {
   background-color: #fdc685;
   border-radius: 15px;
   border: 2px solid #4e6f0b;
+  color: #46230a;
 }
 
 .instructions-steps-add {
@@ -459,6 +463,7 @@ body {
   width: 200px;
   background-color: #fefaf1;
   border-radius: 6px;
+  color: #46230a;
 }
 
 .input-wrapper input:last-child {
@@ -476,6 +481,7 @@ body {
   background-color: #fefaf1;
   border-radius: 6px;
   width: 200px;
+  color: #46230a;
 }
 
 .input-wrapper-add:nth-child(4) {
