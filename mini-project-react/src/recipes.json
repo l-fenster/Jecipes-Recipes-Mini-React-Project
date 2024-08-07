@@ -1,121 +1,314 @@
 [
   {
     "id": "9e7f0d61-aa6b-418a-b56a-6418d19e6e1d",
-    "name": "Pizza",
+    "name": "Pepperoni Pizza",
     "calories": 400,
-    "image": "https://i.imgur.com/eTmWoAN.png",
-    "servings": 1
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mMRswHsggp2BF8zpy3gHexS1PkJYLTkLLA&s",
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat the oven to 475°F (245°C).",
+      "step2": "Roll out the pizza dough on a floured surface.",
+      "step3": "Spread pizza sauce over the dough.",
+      "step4": "Add shredded mozzarella cheese.",
+      "step5": "Place pepperoni slices on top.",
+      "step6": "Bake in the preheated oven for 12-15 minutes until the crust is golden brown."
+    }
   },
   {
     "id": "37e0b31d-63f4-4d42-9f4b-e9a0fc464d60",
     "name": "Salad",
     "calories": 150,
     "image": "https://i.imgur.com/DupGBz5.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Chop lettuce, tomatoes, cucumbers, and any other desired vegetables.",
+      "step2": "Place chopped vegetables in a large bowl.",
+      "step3": "Add dressing and toss to combine.",
+      "step4": "Serve immediately."
+    }
   },
   {
     "id": "b5eb5b5f-41b8-4f1f-8844-7a1a56a17df7",
     "name": "Sweet Potato",
     "calories": 120,
     "image": "https://i.imgur.com/hGraGyR.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat the oven to 400°F (200°C).",
+      "step2": "Wash and peel the sweet potato.",
+      "step3": "Cut the sweet potato into cubes.",
+      "step4": "Place the cubes on a baking sheet and drizzle with olive oil.",
+      "step5": "Roast in the oven for 25-30 minutes until tender."
+    }
   },
   {
     "id": "6c0f6f33-8c50-403d-9d1c-6ac9d8b77f29",
     "name": "Gnocchi",
     "calories": 500,
     "image": "https://i.imgur.com/93ekwW0.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Boil a large pot of salted water.",
+      "step2": "Add gnocchi to the boiling water.",
+      "step3": "Cook until the gnocchi float to the surface, about 2-3 minutes.",
+      "step4": "Drain and serve with your favorite sauce."
+    }
   },
   {
     "id": "f4b4d2bc-ff12-4f3f-b3b3-19d2f1682401",
     "name": "Pot Roast",
     "calories": 350,
     "image": "https://i.imgur.com/WCzJDWz.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat the oven to 300°F (150°C).",
+      "step2": "Season the roast with salt and pepper.",
+      "step3": "Heat oil in a large pot and brown the roast on all sides.",
+      "step4": "Add onions, carrots, and potatoes to the pot.",
+      "step5": "Pour in beef broth and bring to a simmer.",
+      "step6": "Cover and transfer to the oven. Cook for 3-4 hours until the meat is tender."
+    }
   },
   {
     "id": "bf89c1db-5c5b-4262-9d1e-8a68f88c61d5",
     "name": "Lasagna",
     "calories": 750,
     "image": "https://i.imgur.com/ClxOafl.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat the oven to 375°F (190°C).",
+      "step2": "Cook lasagna noodles according to package instructions.",
+      "step3": "Brown ground beef in a pan and add tomato sauce.",
+      "step4": "In a bowl, mix ricotta cheese, egg, and Parmesan cheese.",
+      "step5": "Layer noodles, meat sauce, and cheese mixture in a baking dish.",
+      "step6": "Top with mozzarella cheese and bake for 45 minutes until bubbly."
+    }
   },
   {
     "id": "bca9beec-43d3-48b1-9b57-793a8a8c3520",
     "name": "Hamburger",
     "calories": 400,
     "image": "https://i.imgur.com/LoG39wK.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Form ground beef into a patty.",
+      "step2": "Season the patty with salt and pepper.",
+      "step3": "Grill the patty over medium-high heat for 4-5 minutes per side.",
+      "step4": "Place the patty on a hamburger bun and add desired toppings."
+    }
   },
   {
     "id": "b777a69a-7f1c-41e8-8a4c-1d0e9e4cace8",
     "name": "Pad Thai",
     "calories": 475,
     "image": "https://i.imgur.com/5ktcSzF.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Cook rice noodles according to package instructions.",
+      "step2": "In a wok, heat oil and cook chicken until done.",
+      "step3": "Add garlic, tofu, and shrimp and stir-fry.",
+      "step4": "Push ingredients to the side and scramble an egg in the wok.",
+      "step5": "Add cooked noodles, sauce, and mix well.",
+      "step6": "Garnish with peanuts, bean sprouts, and lime wedges."
+    }
   },
   {
     "id": "d087343e-9a92-48c7-8b27-43e37491b6f5",
     "name": "Almonds",
     "calories": 75,
     "image": "https://i.imgur.com/JRp4Ksx.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Measure out a serving of almonds.",
+      "step2": "Serve as a snack or add to salads or yogurt."
+    }
   },
   {
     "id": "e1f87a2e-60b3-4a3f-bb48-20a396a9a94f",
     "name": "Sarma",
     "calories": 200,
     "image": "https://i.imgur.com/yOlf4Fj.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Soak rice in water for 30 minutes.",
+      "step2": "Mix ground meat, rice, onions, and spices.",
+      "step3": "Place a small amount of mixture on a cabbage leaf and roll tightly.",
+      "step4": "Place rolls in a pot and cover with water.",
+      "step5": "Simmer for 2 hours until cooked through."
+    }
   },
   {
     "id": "0ce7e4d4-1c8a-4e9f-98df-1ecb1e7b8a0b",
     "name": "Bacon",
     "calories": 175,
     "image": "https://i.imgur.com/7GlqDsG.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat a skillet over medium heat.",
+      "step2": "Place bacon strips in the skillet.",
+      "step3": "Cook until crispy, turning occasionally.",
+      "step4": "Drain on paper towels before serving."
+    }
   },
   {
     "id": "bbfd30fd-cd75-4e3b-8fc8-3d3fd62a3c39",
     "name": "Hot Dog",
     "calories": 275,
     "image": "https://i.imgur.com/QqVHdRu.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": false,
+    "dessert": false,
+    "instructions": {
+      "step1": "Heat a pot of water to boiling.",
+      "step2": "Add hot dog to the boiling water and cook for 5 minutes.",
+      "step3": "Place hot dog in a bun and add desired toppings."
+    }
+  },
+  {
+    "id": "4ff15280-4c1a-4edc-9f71-d38729e66e27",
+    "name": "Pumpkin Bread",
+    "calories": 250,
+    "image": "https://www.livewellbakeoften.com/wp-content/uploads/2020/08/Pumpkin-Bread-4s.jpg",
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": true,
+    "instructions": {
+      "step1": "Preheat oven to 350°F (175°C).",
+      "step2": "In a bowl, mix pumpkin puree, sugar, and oil.",
+      "step3": "Add eggs and mix well.",
+      "step4": "Stir in flour, baking soda, and spices.",
+      "step5": "Pour batter into a greased loaf pan.",
+      "step6": "Bake for 60-70 minutes until a toothpick comes out clean."
+    }
   },
   {
     "id": "1c6d5b5f-4e72-4136-8c6c-9cf3e3d16a65",
     "name": "Chocolate Cake",
     "calories": 490,
     "image": "https://i.imgur.com/yrgzA9x.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": true,
+    "instructions": {
+      "step1": "Preheat oven to 350°F (175°C).",
+      "step2": "In a bowl, combine flour, sugar, cocoa powder, baking powder, and salt.",
+      "step3": "Add eggs, milk, oil, and vanilla extract. Beat until smooth.",
+      "step4": "Pour batter into a greased cake pan.",
+      "step5": "Bake for 30-35 minutes until a toothpick comes out clean.",
+      "step6": "Let cool before frosting."
+    }
   },
   {
     "id": "07d9616d-7a63-457c-b8a7-58f6a70a67e3",
     "name": "Wheat Bread",
     "calories": 175,
     "image": "https://i.imgur.com/TsWzMfM.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat oven to 375°F (190°C).",
+      "step2": "In a bowl, mix whole wheat flour, yeast, and salt.",
+      "step3": "Add warm water and knead until smooth.",
+      "step4": "Let dough rise for 1 hour.",
+      "step5": "Shape dough into a loaf and place in a greased pan.",
+      "step6": "Bake for 30-35 minutes until golden brown."
+    }
   },
   {
     "id": "d7a8f0c1-0a34-4e3b-a2d3-3c3e3f11eb19",
     "name": "Orange",
     "calories": 85,
     "image": "https://i.imgur.com/abKGOcv.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Peel the orange.",
+      "step2": "Separate the orange into segments.",
+      "step3": "Serve as a snack or add to a salad."
+    }
+  },
+  {
+    "id": "f60568d7-9e9f-456f-b7e0-25ab7da3d0c8",
+    "name": "Mint Ice Cream",
+    "calories": 300,
+    "image": "https://www.modernhoney.com/wp-content/uploads/2022/12/Peppermint-Ice-Cream-2-scaled.jpg",
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": true,
+    "instructions": {
+      "step1": "Chill an ice cream maker bowl in the freezer.",
+      "step2": "In a bowl, combine heavy cream, milk, sugar, and peppermint extract.",
+      "step3": "Pour the mixture into the ice cream maker.",
+      "step4": "Churn according to the manufacturer's instructions.",
+      "step5": "Fold in crushed peppermint candies.",
+      "step6": "Freeze until firm before serving."
+    }
   },
   {
     "id": "a8d111c4-50ef-4c61-8b16-17e84a86b2f4",
     "name": "Banana",
     "calories": 175,
     "image": "https://i.imgur.com/BMdJhu5.jpg",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Peel the banana.",
+      "step2": "Eat as a snack or slice and add to cereal or yogurt."
+    }
   },
   {
     "id": "62d8a0bc-1b77-4389-9e7b-2e00cace6a2e",
     "name": "Yogurt",
     "calories": 125,
     "image": "https://i.imgur.com/URhdrAm.png",
-    "servings": 1
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Open the yogurt container.",
+      "step2": "Stir if needed and enjoy as is or add fruits and granola."
+    }
+  },
+  {
+    "id": "4c30febc-e8fe-453d-851a-0f53da8918c8",
+    "name": "Margherita Pizza",
+    "calories": 350,
+    "image": "https://images.ctfassets.net/nw5k25xfqsik/64VwvKFqxMWQORE10Tn8pY/200c0538099dc4d1cf62fd07ce59c2af/20220211142754-margherita-9920.jpg",
+    "servings": 1,
+    "vegetarian": true,
+    "dessert": false,
+    "instructions": {
+      "step1": "Preheat the oven to 475°F (245°C).",
+      "step2": "Roll out the pizza dough on a floured surface.",
+      "step3": "Spread tomato sauce over the dough.",
+      "step4": "Add slices of fresh mozzarella cheese.",
+      "step5": "Place fresh basil leaves on top.",
+      "step6": "Bake in the preheated oven for 10-12 minutes until the crust is golden brown."
+    }
   }
 ]

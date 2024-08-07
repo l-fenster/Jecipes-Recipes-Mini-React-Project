@@ -1,10 +1,31 @@
+import { NavLink } from "react-router-dom";
+
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <a href="/">Homepage</a>
-      <a href="/about">About Us</a>
-      <a href="/itemDetails">Item Details</a>
-    </div>
+    <nav className="body" id="sidebar">
+      <ul className="side-items">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Home
+        </NavLink>
+        <br />
+        <NavLink
+          to="/recipesPage"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Recipes
+        </NavLink>
+        <br />
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          About
+        </NavLink>
+      </ul>
+    </nav>
   );
 };
 

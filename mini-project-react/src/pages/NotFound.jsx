@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
-
-const imgURL = "../assets/not-found.png";
+import cupcakeImg from "../assets/404-cupcake.png";
 
 export default function NotFound() {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/");
+    navigate("/recipesPage");
   };
   return (
     <div
@@ -18,14 +17,8 @@ export default function NotFound() {
         gap: "50px",
       }}
     >
-      <img
-        src={imgURL}
-        alt="Page Not Found"
-        width={600}
-        height="auto"
-        style={{ filter: "invert(1)" }}
-      />
-      <button onClick={handleNavigate}>Return to Homepage</button>
+      <img src={cupcakeImg} alt="Page Not Found" width={600} height="auto" />
+      <button onClick={handleNavigate}>Return to Recipes</button>
     </div>
   );
 }
