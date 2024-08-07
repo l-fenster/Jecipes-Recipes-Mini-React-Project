@@ -12,6 +12,9 @@ export default function AddRecipe({ createRecipe }) {
   const [calories, setCalories] = useState("");
   const [servings, setServings] = useState("");
   const [instructions, setInstructions] = useState({ step1: "" });
+  const [vegetarian, setVegetarian] = useState(false);
+  const [dessert, setDessert] = useState(false);
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -53,6 +56,8 @@ export default function AddRecipe({ createRecipe }) {
       image,
       calories,
       servings,
+      vegetarian,
+      dessert,
       instructions,
     };
     createRecipe(newRecipe);
@@ -60,6 +65,8 @@ export default function AddRecipe({ createRecipe }) {
     setImg("");
     setCalories("");
     setServings("");
+    setVegetarian(false);
+    setDessert(false);
     setInstructions({ step1: "" });
     handleNavigate();
   };
@@ -105,6 +112,57 @@ export default function AddRecipe({ createRecipe }) {
                 onChange={handleServingsChange}
               />
             </div>
+            <div className="radio">
+              <label>Vegetarian:</label>
+              <div className="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="vegetarian"
+                    value="true"
+                    checked={vegetarian === true}
+                    onChange={() => setVegetarian(true)}
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="vegetarian"
+                    value="false"
+                    checked={vegetarian === false}
+                    onChange={() => setVegetarian(false)}
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+            <div className="radio">
+              <label>Dessert:</label>
+              <div className="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="dessert"
+                    value="true"
+                    checked={dessert === true}
+                    onChange={() => setDessert(true)}
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="dessert"
+                    value="false"
+                    checked={dessert === false}
+                    onChange={() => setDessert(false)}
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+
             <div className="input-wrapper-add">
               {/* {Object.keys(instructions).length < 6 && (
             <button type="button" onClick={handleAddInstruction}>

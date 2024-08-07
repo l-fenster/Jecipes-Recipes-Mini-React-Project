@@ -15,6 +15,9 @@ export default function EditRecipe({ recipes, editRecipe }) {
   const [instructions, setInstructions] = useState(
     Object.values(foundRecipe.instructions)
   );
+  const [vegetarian, setVegetarian] = useState(foundRecipe.vegetarian || false);
+  const [dessert, setDessert] = useState(foundRecipe.dessert || false);
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -57,6 +60,8 @@ export default function EditRecipe({ recipes, editRecipe }) {
       image: img ? img : defaultFoodImage,
       calories,
       servings,
+      vegetarian,
+      dessert,
       instructions: instructions.reduce(
         (accumulator, currentValue, instructionIndex) => {
           accumulator[`step${instructionIndex + 1}`] = currentValue;
@@ -106,6 +111,57 @@ export default function EditRecipe({ recipes, editRecipe }) {
                 onChange={handleServingsChange}
               />
             </div>
+            <div className="radio">
+              <label>Vegetarian:</label>
+              <div className="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="vegetarian"
+                    value="true"
+                    checked={vegetarian === true}
+                    onChange={() => setVegetarian(true)}
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="vegetarian"
+                    value="false"
+                    checked={vegetarian === false}
+                    onChange={() => setVegetarian(false)}
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+            <div className="radio">
+              <label>Dessert:</label>
+              <div className="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="dessert"
+                    value="true"
+                    checked={dessert === true}
+                    onChange={() => setDessert(true)}
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="dessert"
+                    value="false"
+                    checked={dessert === false}
+                    onChange={() => setDessert(false)}
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+
             {/* {instructions.length < 6 && (
               <button type="button" onClick={handleAddInstruction}>
                 Add Instruction Step
